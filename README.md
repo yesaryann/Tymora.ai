@@ -1,8 +1,4 @@
-Thanks for the clarification! Since **Tymora.ai** is not just a browser extension but a **cross-platform AI product (Web, Chrome Extension, Android, iOS)** with **premium plans and SaaS goals**, here’s a **startup-style `README.md`** tailored for visibility, professionalism, and investor/user confidence.
 
----
-
-````markdown
 # 🌙 Tymora.ai — Your Mindful AI to Fight Doomscrolling
 
 Tymora.ai is an **AI-powered productivity platform** designed to eliminate doomscrolling, enhance digital wellbeing, and promote intentional browsing. Available as a **browser extension**, and soon on **Android** and **iOS**, Tymora helps individuals and teams take back control of their time.
@@ -129,8 +125,8 @@ MIT License © \[Your Name]
 Questions? Collaborations? Reach out:
 
 * Email: [i.rajaryann@gmail.com](mailto:i.rajaryann@gmail.com)
-* Twitter/X: [@yourhandle](https://twitter.com/)
-* GitHub: [github.com/yourusername](https://github.com/yourusername)
+* Twitter/X: [@okayaryann](https://twitter.com/)
+* GitHub: [github.com/yesaryann](https://github.com/yesaryann)
 
 ---
 
@@ -139,17 +135,3 @@ Questions? Collaborations? Reach out:
 
 ```
 
----
-
-### 🔜 Want to go further?
-
-I can also help you:
-- Build a **SaaS landing page** in React/Vite
-- Write a **pitch deck** for Tymora.ai
-- Set up **Stripe payments**
-- Build **user onboarding & dashboards**
-- Integrate **Notion/Slack/Google APIs**
-- Prepare for **submission to Product Hunt, BetaList, or Chrome Store**
-
-Let me know your next move 🚀
-```
