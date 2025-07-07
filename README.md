@@ -48,7 +48,7 @@ Tymora.ai is a **cross-platform AI SaaS solution** that detects unproductive scr
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/yourusername/tymora.ai.git
+git clone https://github.com/yesaryann/tymora.ai.git
 cd tymora.ai
 
 # 2. Install dependencies
@@ -116,7 +116,7 @@ VITE_SUPABASE_ANON_KEY=your-anon-key
 
 ## 📄 License
 
-MIT License © \[Your Name]
+MIT License © \[Raj Aryan]
 
 ---
 
@@ -133,5 +133,5 @@ Questions? Collaborations? Reach out:
 > Tymora.ai — Because your attention deserves better.
 > ✨ Focus is the new productivity.
 
-```
+
 
