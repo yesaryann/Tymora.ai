@@ -1,0 +1,11 @@
+/* Facebook blocking styles */
+[role="feed"],
+[data-pagelet="FeedUnit"],
+[href*="/reel/"],
+[href*="/watch/"] {
+  display: none !important;
+}
+
+[data-tymora-hidden] {
+  display: none !important;
+}

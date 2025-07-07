@@ -1,0 +1,48 @@
+/* Instagram blocking styles for Tymora.ai */
+/* Only hide elements when they are explicitly marked as hidden by the extension */
+
+[data-tymora-hidden="reels"] {
+  display: none !important;
+}
+
+[data-tymora-hidden="stories"] {
+  display: none !important;
+}
+
+[data-tymora-hidden="explore"] {
+  display: none !important;
+}
+
+/* General fallback for any Tymora-hidden elements */
+[data-tymora-hidden] {
+  display: none !important;
+}
+
+/* Ensure smooth transitions when elements are hidden/shown */
+[data-tymora-hidden] {
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Additional Instagram-specific selectors for better blocking */
+/* These will only be applied when the data-tymora-hidden attribute is present */
+
+/* Reels blocking */
+[data-tymora-hidden="reels"][href*="/reels/"],
+[data-tymora-hidden="reels"][aria-label*="Reels"] {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Stories blocking */
+[data-tymora-hidden="stories"][data-testid="stories-tray"],
+[data-tymora-hidden="stories"][aria-label*="Stories"] {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Explore blocking */
+[data-tymora-hidden="explore"][href="/explore/"],
+[data-tymora-hidden="explore"][aria-label*="Explore"] {
+  display: none !important;
+  visibility: hidden !important;
+}

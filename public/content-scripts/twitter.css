@@ -1,0 +1,59 @@
+/* Twitter/X blocking styles for Tymora.ai */
+/* Only hide elements when they are explicitly marked as hidden by the extension */
+
+[data-tymora-hidden="trending"] {
+  display: none !important;
+}
+
+[data-tymora-hidden="autoplay"] {
+  display: none !important;
+}
+
+[data-tymora-hidden="suggestions"] {
+  display: none !important;
+}
+
+/* General fallback for any Tymora-hidden elements */
+[data-tymora-hidden] {
+  display: none !important;
+}
+
+/* Ensure smooth transitions when elements are hidden/shown */
+[data-tymora-hidden] {
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Additional Twitter-specific selectors for better blocking */
+/* These will only be applied when the data-tymora-hidden attribute is present */
+
+/* Trending blocking */
+[data-tymora-hidden="trending"][data-testid="trend"],
+[data-tymora-hidden="trending"][aria-label*="Trending"] {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Autoplay blocking */
+[data-tymora-hidden="autoplay"] {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Suggestions blocking */
+[data-tymora-hidden="suggestions"][data-testid="UserCell"],
+[data-tymora-hidden="suggestions"][aria-label*="Follow"],
+[data-tymora-hidden="suggestions"][aria-label="Who to follow"] {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Video autoplay specific handling */
+video[data-tymora-hidden="autoplay"] {
+  pointer-events: none;
+}
+
+/* Trending sidebar specific handling */
+aside[data-tymora-hidden="trending"] {
+  display: none !important;
+  visibility: hidden !important;
+}

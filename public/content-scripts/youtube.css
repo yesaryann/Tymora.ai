@@ -1,0 +1,133 @@
+/* YouTube blocking styles for Tymora.ai */
+/* IMPORTANT: Only hide elements when explicitly marked as hidden by the extension */
+/* This prevents automatic blocking and ensures user control */
+
+/* Hide Shorts navigation and shelves ONLY when marked as hidden */
+[data-tymora-hidden="shorts"][data-tymora-type="navigation"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Hide Shorts in video feeds ONLY when marked as hidden */
+[data-tymora-hidden="shorts"][data-tymora-type="video"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Hide recommendations sidebar ONLY when marked as hidden */
+[data-tymora-hidden="recommendations"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Hide trending ONLY when marked as hidden */
+[data-tymora-hidden="trending"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* General fallback for any Tymora-hidden elements */
+[data-tymora-hidden] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* CRITICAL: Never hide video players or video elements under any circumstances */
+video,
+ytd-player,
+#movie_player,
+.html5-video-player,
+.video-stream,
+.html5-main-video {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Ensure video containers are never hidden */
+ytd-watch-flexy,
+ytd-player-container,
+#player-container,
+#player,
+#player-api,
+.html5-video-container {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Ensure video controls are never hidden */
+.ytp-chrome-controls,
+.ytp-chrome-bottom,
+.ytp-chrome-top,
+.ytp-progress-bar-container {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Show blocked content message */
+.tymora-blocked-message {
+  background: #1f2937;
+  color: #9ca3af;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin: 20px;
+  border: 1px solid #374151;
+}
+
+.tymora-blocked-message::before {
+  content: "🚫 ";
+  font-size: 24px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.tymora-blocked-message h3 {
+  color: #f3f4f6;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.tymora-blocked-message p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Smooth transitions when elements are restored */
+[data-tymora-restored] {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Ensure proper layout when shorts are hidden */
+ytd-browse[page-subtype="home"] ytd-rich-grid-renderer {
+  display: grid !important;
+}
+
+/* Fix any layout issues when content is hidden */
+ytd-rich-grid-row {
+  display: contents !important;
+}
+
+/* Debug styles - only visible in development */
+[data-tymora-debug] {
+  border: 2px solid red !important;
+  background: rgba(255, 0, 0, 0.1) !important;
+}
+
+/* Ensure YouTube's own video elements are never affected */
+ytd-video-renderer:not([data-tymora-hidden]) video,
+ytd-compact-video-renderer:not([data-tymora-hidden]) video,
+ytd-grid-video-renderer:not([data-tymora-hidden]) video {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
